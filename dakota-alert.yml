@@ -1,0 +1,29 @@
+esphome:
+  name: dakota-alert
+
+esp8266:
+  board: d1_mini
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  password: ""
+
+ota:
+  password: ""
+
+wifi:
+  domain: ""
+  ap:
+    ssid: "dakota-alert-cp"
+
+captive_portal:
+
+mdns:
+  disabled: true
+
+web_server:
+
+prometheus:
