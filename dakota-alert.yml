@@ -5,7 +5,7 @@ esp8266:
   board: d1_mini
 
 # Enable logging
-logger:
+#logger:
 
 # Enable Home Assistant API
 api:
@@ -27,3 +27,37 @@ mdns:
 web_server:
 
 prometheus:
+
+binary_sensor:
+  - platform: gpio
+    pin:
+      number: D1
+      mode:
+        input: true
+        pullup: true
+      inverted: true
+    name: "Channel 1"
+  - platform: gpio
+    pin:
+      number: D2
+      mode:
+        input: true
+        pullup: true
+      inverted: true
+    name: "Channel 2"
+  - platform: gpio
+    pin:
+      number: D3
+      mode:
+        input: true
+        pullup: true
+      inverted: true
+    name: "Channel 3"
+  - platform: gpio
+    pin:
+      number: D5
+      mode:
+        input: true
+        pullup: true
+      inverted: true
+    name: "Channel 4"
